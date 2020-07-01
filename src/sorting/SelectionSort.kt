@@ -8,10 +8,18 @@ import kotlin.test.assertTrue
  */
 
 /**
+ *  Selection sort is an unstable algorithm
+ *
+ *  For example, given [4*, 2, 3, 4, 1], sort it in ascending order.
+ *  When we pick the least value which is 1 and swap it to the first position,
+ *  it became [1, 2, 3, 4, 4*], the first 4* has been moved to a position after the other 4,
+ *  the relative order of the 4's have changed.
+ *
  *  Time Complexity
  *
- *  Best-case: O(n^)
- *  Worst-case: O(n^2)
+ *  Best-case: O(n^2) -> Go through the array to find the max/min element which takes O(n^2/2) ≈ O(n^2)
+ *  Worst-case: O(n^2) -> Same as the best-case
+ *
  */
 
 fun main() {
